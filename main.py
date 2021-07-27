@@ -6,7 +6,15 @@
 #    CH4_par = sheet[row][1].value                             # распарсил эту колонку
 #    consntants_CH4.append(CH4_par)                              # записал значения в список
 
+# import pandas
 
+# excel_data_df = pandas.read_excel('constants.xlsx',
+# sheet_name='const')
+# json_str = excel_data_df.to_json()
+# json_str = excel_data_df.to_json(orient='records')
+# print('Excel Sheet to JSON:\n', json_str)
 
-
-# начало положено)
+import json
+with open('constants.json', 'r', encoding='windows-1251') as f:
+    text = json.load(f)
+    print(text)
