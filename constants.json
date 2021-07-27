@@ -28,7 +28,7 @@
             "CH4:": "The amount of oxidizer for combustion",
             "value": "9.524"
         }],
-    "CH4": [
+    "CO2": [
         {
             "CO2:": "Molar mass",
             "value": "44.011"
