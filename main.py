@@ -19,6 +19,4 @@
  #   text = json.load(f)
  #   print(text)
 
-import excel2json
 
-excel2json.convert_from_file('constants.xlsx')
