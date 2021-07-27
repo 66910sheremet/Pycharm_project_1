@@ -14,7 +14,11 @@
 # json_str = excel_data_df.to_json(orient='records')
 # print('Excel Sheet to JSON:\n', json_str)
 
-import json
-with open('constants.json', 'r', encoding='windows-1251') as f:
-    text = json.load(f)
-    print(text)
+# import json
+# with open('constants.json', 'r', encoding='utf-8', errors='ignore') as f:
+ #   text = json.load(f)
+ #   print(text)
+
+import excel2json
+
+excel2json.convert_from_file('constants.xlsx')
