@@ -1,5 +1,5 @@
 {
-    "const": [
+    "CH4": [
         {
             "CH4:": "Molar mass",
             "value": "16.043"
@@ -27,45 +27,39 @@
         {
             "CH4:": "The amount of oxidizer for combustion",
             "value": "9.524"
-        },
+        }],
+    "CH4": [
         {
-            "CH4:": " CO2:",
-            "value": "value"
-        },
-        {
-            "CH4:": "Molar mass",
+            "CO2:": "Molar mass",
             "value": "44.011"
         },
         {
-            "CH4:": "Gas constant",
+            "CO2:": "Gas constant",
             "value": "188.9178"
         },
         {
-            "CH4:": "Adiabatic exponent",
+            "CO2:": "Adiabatic exponent",
             "value": "1.31"
         },
         {
-            "CH4:": "Absolute density",
+            "CO2:": "Absolute density",
             "value": "1.977"
         },
         {
-            "CH4:": "Relative density",
+            "CO2:": "Relative density",
             "value": "1.529"
         },
         {
-            "CH4:": "Heat of combustion",
+            "CO2:": "Heat of combustion",
             "value": "0"
         },
         {
-            "CH4:": "The amount of oxidizer for combustion",
+            "CO2:": "The amount of oxidizer for combustion",
             "value": "0"
-        },
+        }],
+    "air:": [
         {
-            "CH4:": "air",
-            "value": "value"
-        },
-        {
-            "CH4:": "Absolute density",
+            "air:": "Absolute density",
             "value": "1.293"
         }
     ]
