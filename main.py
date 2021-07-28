@@ -23,5 +23,29 @@ import json
 with open('constants.json','r') as file:
     constanty = json.load(file)
 # print(constanty['CH4'])
+b = []
 for CH4 in constanty['CH4']:
-    print(CH4['value'])
+    b.append(CH4['value'])
+CH4c1 = b[0]
+CH4c2 = b[1]
+CH4c3 = b[2]
+CH4c4 = b[3]
+CH4c5 = b[4]
+CH4c6 = b[5]
+CH4c7 = b[6]
+# print(CH4c1, CH4c2, CH4c3, CH4c4, CH4c5, CH4c6, CH4c7)
+
+with open('constants.json','r') as file:
+    constanty = json.load(file)
+# print(constanty['CO2'])
+c = []
+for CO2 in constanty['CO2']:
+    c.append(CO2['value'])
+CO2c1 = c[0]
+CO2c2 = c[1]
+CO2c3 = c[2]
+CO2c4 = c[3]
+CO2c5 = c[4]
+CO2c6 = c[5]
+CO2c7 = c[6]
+# print(CO2c1, CO2c2, CO2c3, CO2c4, CO2c5, CO2c6, CO2c7)
