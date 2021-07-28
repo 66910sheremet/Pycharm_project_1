@@ -19,4 +19,9 @@
  #   text = json.load(f)
  #   print(text)
 
-
+import json
+with open('constants.json','r') as file:
+    constanty = json.load(file)
+# print(constanty['CH4'])
+for CH4 in constanty['CH4']:
+    print(CH4['value'])

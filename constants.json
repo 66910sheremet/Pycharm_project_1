@@ -2,31 +2,31 @@
     "CH4": [
         {
             "CH4:": "Molar mass",
-            "value": "16.043"
+            "value": 16.043
         },
         {
             "CH4:": "Gas constant",
-            "value": "518.2609"
+            "value": 518.2609
         },
         {
             "CH4:": "Adiabatic exponent",
-            "value": "1.32"
+            "value": 1.32
         },
         {
             "CH4:": "Absolute density",
-            "value": "0.717"
+            "value": 0.717
         },
         {
             "CH4:": "Relative density",
-            "value": "0.555"
+            "value": 0.555
         },
         {
             "CH4:": "Heat of combustion",
-            "value": "35000000"
+            "value": 35000000
         },
         {
             "CH4:": "The amount of oxidizer for combustion",
-            "value": "9.524"
+            "value": 9.524
         }],
     "CO2": [
         {
