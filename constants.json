@@ -57,9 +57,9 @@
             "CO2:": "The amount of oxidizer for combustion",
             "value": "0"
         }],
-    "air:": [
+    "air": [
         {
-            "air:": "Absolute density",
+            "air": "Absolute density",
             "value": "1.293"
         }
     ]

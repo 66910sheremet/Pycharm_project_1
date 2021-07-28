@@ -49,3 +49,13 @@ CO2c5 = c[4]
 CO2c6 = c[5]
 CO2c7 = c[6]
 # print(CO2c1, CO2c2, CO2c3, CO2c4, CO2c5, CO2c6, CO2c7)
+
+with open('constants.json','r') as file:
+    constanty = json.load(file)
+# print(constanty['CO2'])
+d = []
+for air in constanty['air']:
+    d.append(air['value'])
+airc1 = d[0]
+
+print(airc1)
