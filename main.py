@@ -10,4 +10,15 @@ def getValueFromConst(type, value):
             return i['value']
 
 
-print(getValueFromConst('CH4', 'Gas constant'))
+#print(getValueFromConst('CO2', 'Adiabatic exponent'))
+
+with open('variables.json', 'r') as f:
+    variant = json.load(f)
+
+
+def getValueFromVariant(type, value):
+    for i in variant[type]:
+        if i[type] == value:
+            return i['value']
+
+print(getValueFromVariant('var', 'pressures'))

@@ -1,98 +1,79 @@
 {
     "var": [
         {
-            "position": "1",
-            "description": "Methane",
+            "var": "Methane",
             "value": "50"
         },
         {
-            "position": "2",
-            "description": "Carbon dioxide",
+            "var": "Carbon dioxide",
             "value": "50"
         },
         {
-            "position": "3",
-            "description": "pressure",
+            "var": "pressures",
             "value": "1300"
         },
         {
-            "position": "4",
-            "description": "N =",
+            "var": "N =",
             "value": "2800"
         },
         {
-            "position": "5",
-            "description": "alpha",
+            "var": "alpha",
             "value": "0.5"
         },
         {
-            "position": "6",
-            "description": "The initial gas temperature of the accepted composition is t =:",
+            "var": "The initial gas temperature of the accepted composition is t =:",
             "value": "20"
         },
         {
-            "position": "7",
-            "description": "Atmosphere pressure:",
+            "var": "Atmosphere pressure:",
             "value": "101325"
         },
         {
-            "position": "8",
-            "description": "diameter",
+            "var": "diameter",
             "value": "0.00319"
         },
         {
-            "position": "9",
-            "description": "step",
+            "var": "step",
             "value": "0.0001"
         },
         {
-            "position": "10",
-            "description": "width",
+            "var": "width",
             "value": "0.002"
         },
         {
-            "position": "11",
-            "description": "step",
+            "var": "step",
             "value": "0.0001"
         },
         {
-            "position": "12",
-            "description": "height",
+            "var": "height",
             "value": "0.002"
         },
         {
-            "position": "13",
-            "description": "step",
+            "var": "step",
             "value": "0.0001"
         },
         {
-            "position": "14",
-            "description": "Fire holes:",
+            "var": "Fire holes:",
             "value": "30"
         },
         {
-            "position": "15",
-            "description": "Coef. Head bore flow rate:",
+            "var": "Coef. Head bore flow rate:",
             "value": "0.89"
         },
         {
-            "position": "16",
-            "description": "Coef. Burner nozzle flow:",
+            "var": "Coef. Burner nozzle flow:",
             "value": "0.9"
         },
         {
-            "position": "17",
-            "description": "Coef. Loss of ejection tube (1.5 or 2.1 or 3)",
+            "var": "Coef. Loss of ejection tube (1.5 or 2.1 or 3)",
             "value": "1.5"
         },
         {
-            "position": "18",
-            "description": "Burner cover temperature",
+            "var": "Burner cover temperature",
             "value": "350"
         },
         {
-            "position": "19",
-            "description": "Coef. Heat transfer int. P. cover",
+            "var": "Coef. Heat transfer int. P. cover",
             "value": "2.5"
         }
     ]
