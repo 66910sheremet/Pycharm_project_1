@@ -1,0 +1,80 @@
+{
+  "var": [
+    {
+      "var": "Methane",
+      "value": "50"
+    },
+    {
+      "var": "Carbon dioxide",
+      "value": "50"
+    },
+    {
+      "var": "pressures",
+      "value": "1300"
+    },
+    {
+      "var": "N =",
+      "value": "2800"
+    },
+    {
+      "var": "alpha",
+      "value": "0.5"
+    },
+    {
+      "var": "(start) t =",
+      "value": "20"
+    },
+    {
+      "var": "Atmosphere pressure",
+      "value": "101325"
+    },
+    {
+      "var": "diameter",
+      "value": "0.00319"
+    },
+    {
+      "var": "stepd",
+      "value": "0.0001"
+    },
+    {
+      "var": "width",
+      "value": "0.002"
+    },
+    {
+      "var": "stepw",
+      "value": "0.0001"
+    },
+    {
+      "var": "height",
+      "value": "0.004"
+    },
+    {
+      "var": "steph",
+      "value": "0.0001"
+    },
+    {
+      "var": "Fire holes",
+      "value": "30"
+    },
+    {
+      "var": "Coef. Head bore flow rate",
+      "value": "0.89"
+    },
+    {
+      "var": "Coef. Burner nozzle flow",
+      "value": "0.9"
+    },
+    {
+      "var": "Coef. Loss of ejection tube (1.5 or 2.1 or 3)",
+      "value": "1.5"
+    },
+    {
+      "var": "Burner cover temperature",
+      "value": "350"
+    },
+    {
+      "var": "Coef. Heat transfer int. P. cover",
+      "value": "2.5"
+    }
+  ]
+}
