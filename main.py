@@ -39,6 +39,7 @@ def getValueFromVariant(type, value):
         if i[type] == value:
             return i['value']
 
+
 v1 = getValueFromVariant('var', 'Methane')         # процентное содержание метана
 v2 = getValueFromVariant('var', 'Carbon dioxide')  # процентное содержание диоксида углерода
 v3 = getValueFromVariant('var', 'pressures')       # давление газа
@@ -59,7 +60,9 @@ v16 = getValueFromVariant('var', 'Coef. Loss of ejection tube (1.5 or 2.1 or 3)'
 v17 = getValueFromVariant('var', 'Burner cover temperature')    # температура крышки горелки
 v18 = getValueFromVariant('var', 'Coef. Heat transfer int. P. cover')    # коэф. теплоотдачи внутренней пов-ти крышки
 
+    # формулы
+    # низшая теплота сгорания газа принятого состава Qн:
 
+qn = (0.01 * (int(v1) * int(c6CH4) + int(v2) * int(c6CO2))) / 1000000   # Мдж/м3
 
-
-print(v18)
+print(qn)
