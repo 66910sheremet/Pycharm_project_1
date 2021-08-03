@@ -21,7 +21,7 @@
             "value": "0.5"
         },
         {
-            "var": "The initial gas temperature of the accepted composition is t =:",
+            "var": "(start) t =:",
             "value": "20"
         },
         {
@@ -33,7 +33,7 @@
             "value": "0.00319"
         },
         {
-            "var": "step",
+            "var": "stepd",
             "value": "0.0001"
         },
         {
@@ -41,15 +41,15 @@
             "value": "0.002"
         },
         {
-            "var": "step",
+            "var": "stepw",
             "value": "0.0001"
         },
         {
             "var": "height",
-            "value": "0.002"
+            "value": "0.004"
         },
         {
-            "var": "step",
+            "var": "steph",
             "value": "0.0001"
         },
         {
