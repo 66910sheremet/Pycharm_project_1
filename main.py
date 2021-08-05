@@ -20,3 +20,13 @@ def getResult():
     return print(generator.Fod)
 
     return print(generator.Forc)
+
+    return print(generator.Dgol1)
+
+    return print(generator.Dgol2)
+
+    return print(generator.U_0)
+
+    return print(generator.U_s)
+
+    return print(generator.fc)

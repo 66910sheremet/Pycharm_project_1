@@ -1,6 +1,8 @@
-import dictionary
 from decimal import Decimal
 
+import dictionary
+
+from math import sin
 # формулы
 # 1. Низшая теплота сгорания газа принятого состава Qн:
 
@@ -85,4 +87,46 @@ Forc = Decimal('0.01') * Decimal(dictionary.v14) * Decimal(dictionary.v10) * Dec
 Forc = round(Forc, 3)
 print(Forc)
 
-# 10. Диаметр поперечного сечения головки горелки:
+# 10. Диаметр поперечного сечения головки горелки, мм:
+
+# 1) Для круглых отверстий:
+
+Dgol1 = (Decimal(Decimal('4') - Decimal(dictionary.v8))) / Decimal(sin(0.1))
+
+Dgol1 = round(Dgol1, 3)
+print(Dgol1)                       # Диаметр головки должен быть от 3,5 до 100
+
+# 1) Для прямоуголных отверстий:
+
+Dgol2 = (Decimal(Decimal('4') - Decimal(dictionary.v10))) / Decimal(sin(0.1))
+
+Dgol2 = round(Dgol2, 3)
+print(Dgol2)                       # Диаметр головки должен быть от 3,5 до 100
+
+
+# 11. Скорость выхода газовоздушной смеси из огневых отверстий головки горелки м/с:
+
+U_0 = (Decimal(Q1) * (Decimal('1') + Decimal(dictionary.v5) * Decimal(V0))) / Decimal(Fod)
+
+U_0 = round(U_0, 2)
+print(U_0)
+
+# 12. Скорость истечения газа из сопла, м/с:
+
+U_s = Decimal(dictionary.v15) * (((Decimal('2') * Decimal(kg) * Decimal(Rg) *(Decimal('273') + Decimal(dictionary.v6))) /
+    (Decimal(kg) - Decimal('1'))) * (Decimal('1') - (Decimal(dictionary.v7) / (Decimal(dictionary.v7) + Decimal(dictionary.v3))) **
+                                     ((Decimal(kg) - Decimal('1')) / Decimal(kg)))) ** Decimal('0.5')
+
+U_s = round(U_s, 2)
+print(U_s)
+
+# 13. Площадь сечения сопла см2:
+
+Fc = (Decimal(Q1) / (Decimal('0.36') * Decimal(U_s))) * Decimal('10000')
+
+Fc = round(Fc, 2)
+print(Fc)
+
+
+# 14. Оптимальные размеры теплового рассекателя:
+
