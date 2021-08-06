@@ -1,8 +1,8 @@
 from decimal import Decimal
+from math import sin
 
 import dictionary
 
-from math import sin
 # формулы
 # 1. Низшая теплота сгорания газа принятого состава Qн:
 
@@ -20,15 +20,13 @@ V0 = Decimal((Decimal('0.01') * (Decimal(dictionary.v1) * Decimal(dictionary.c7C
 V0 = round(V0, 2)
 print(V0)
 
-
 # 3. Абсолютная плотность газа принятого состава, кг/м3:
 
 rg = Decimal((Decimal('0.01') * (Decimal(dictionary.v1) * Decimal(dictionary.c4CH4) + Decimal(dictionary.v2) * Decimal(
-    dictionary.c4CO2))))   # кг/м3
+    dictionary.c4CO2))))  # кг/м3
 
 rg = round(rg, 2)
 print(rg)
-
 
 # 4. Относительная плотность газа принятого состава:
 
@@ -38,11 +36,11 @@ S = Decimal((Decimal('0.01') * (Decimal(dictionary.v1) * Decimal(dictionary.c5CH
 S = round(S, 2)
 print(S)
 
-
 # 5. Газовая постоянная газа принятого состава, Дж/(кг*К):
 
-Rg = Decimal('831451')/(Decimal((Decimal('0.01') * (Decimal(dictionary.v1) * Decimal(dictionary.c1CH4) +
-    Decimal(dictionary.v2) * Decimal(dictionary.c1CO2)))))    #Дж/(кг*К)
+Rg = Decimal('831451') / (Decimal((Decimal('0.01') * (Decimal(dictionary.v1) * Decimal(dictionary.c1CH4) +
+                                                      Decimal(dictionary.v2) * Decimal(
+            dictionary.c1CO2)))))  # Дж/(кг*К)
 
 Rg = round(Rg, 2)
 print(Rg)
@@ -94,15 +92,14 @@ print(Forc)
 Dgol1 = (Decimal(Decimal('4') - Decimal(dictionary.v8))) / Decimal(sin(0.1))
 
 Dgol1 = round(Dgol1, 3)
-print(Dgol1)                       # Диаметр головки должен быть от 3,5 до 100
+print(Dgol1)  # Диаметр головки должен быть от 3,5 до 100
 
 # 1) Для прямоуголных отверстий:
 
 Dgol2 = (Decimal(Decimal('4') - Decimal(dictionary.v10))) / Decimal(sin(0.1))
 
 Dgol2 = round(Dgol2, 3)
-print(Dgol2)                       # Диаметр головки должен быть от 3,5 до 100
-
+print(Dgol2)  # Диаметр головки должен быть от 3,5 до 100
 
 # 11. Скорость выхода газовоздушной смеси из огневых отверстий головки горелки м/с:
 
@@ -113,9 +110,11 @@ print(U_0)
 
 # 12. Скорость истечения газа из сопла, м/с:
 
-U_s = Decimal(dictionary.v15) * (((Decimal('2') * Decimal(kg) * Decimal(Rg) *(Decimal('273') + Decimal(dictionary.v6))) /
-    (Decimal(kg) - Decimal('1'))) * (Decimal('1') - (Decimal(dictionary.v7) / (Decimal(dictionary.v7) + Decimal(dictionary.v3))) **
-                                     ((Decimal(kg) - Decimal('1')) / Decimal(kg)))) ** Decimal('0.5')
+U_s = Decimal(dictionary.v15) * (
+        ((Decimal('2') * Decimal(kg) * Decimal(Rg) * (Decimal('273') + Decimal(dictionary.v6))) /
+         (Decimal(kg) - Decimal('1'))) * (
+                Decimal('1') - (Decimal(dictionary.v7) / (Decimal(dictionary.v7) + Decimal(dictionary.v3))) **
+                ((Decimal(kg) - Decimal('1')) / Decimal(kg)))) ** Decimal('0.5')
 
 U_s = round(U_s, 2)
 print(U_s)
@@ -127,6 +126,25 @@ Fc = (Decimal(Q1) / (Decimal('0.36') * Decimal(U_s))) * Decimal('10000')
 Fc = round(Fc, 2)
 print(Fc)
 
+# 14. Оптимальные размеры теплового рассекателя
+def calc():
+    KPDtemp = 0
+    delta = 0.01
+    diamter = 6
+    height = 6
+    while diamter <= 12:
+        while height <= 24:
+            KPD = 36.3091752883329 + (2.66579338833343 * diamter) + (0.613323721222232) - (
+                    0.118982154166671 * diamter ** 2) - \
+                  (0.0281706407222229 * diamter * height) - (0.0102175696759261 * height ** 2)
 
-# 14. Оптимальные размеры теплового рассекателя:
-
+            CO = 707.783333333346 - (62.9041666666692 * diamter) - (20.7408333333336 * height) + (
+                    2.48958333333345 * diamter ** 2) + (
+                         1.39388888888891 * diamter * height) + (0.302083333333337 * height ** 2)
+            if (CO < 360 & KPDtemp < KPD):
+                KPDtemp = KPD
+            else:
+                continue
+        height += delta
+    diamter += delta
+    return KPDtemp
