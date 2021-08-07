@@ -126,6 +126,7 @@ Fc = (Decimal(Q1) / (Decimal('0.36') * Decimal(U_s))) * Decimal('10000')
 Fc = round(Fc, 2)
 print(Fc)
 
+
 # 14. Оптимальные размеры теплового рассекателя
 def calc():
     KPDtemp = 0
@@ -141,10 +142,9 @@ def calc():
             CO = 707.783333333346 - (62.9041666666692 * diamter) - (20.7408333333336 * height) + (
                     2.48958333333345 * diamter ** 2) + (
                          1.39388888888891 * diamter * height) + (0.302083333333337 * height ** 2)
-            if (CO < 360 & KPDtemp < KPD):
+            print("KPD is " + str(KPD) + " CO is " + str(CO))
+            height += delta
+            if (CO < 360 and KPDtemp < KPD):
                 KPDtemp = KPD
-            else:
-                continue
-        height += delta
-    diamter += delta
+        diamter += delta
     return KPDtemp
