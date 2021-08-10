@@ -10,7 +10,7 @@ if discr > 0:
     x2 = (-B - math.sqrt(discr)) / (2 * A)
     print('x1=', x1,'x2=', x2)
 elif discr == 0:
-    x = -b / (2 * a)
+    x = -B / (2 * A)
     print(x)
 else:
     print('Корней нет')
