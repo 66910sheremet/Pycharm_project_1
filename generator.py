@@ -172,14 +172,14 @@ print('15',Ftepl, 'Площадь внутренней поверхности к
 
 # 16. Массовый расход газовоздушной смеси, кг/с:
 
-Gпот = Decimal(U_s) * Decimal(Fc) * Decimal(Decimal(rg) + Decimal(dictionary.v5) * Decimal(V0) * Decimal(dictionary.c1air))
+Gpot = Decimal(U_s) * Decimal(Fc) * Decimal(Decimal(rg) + Decimal(dictionary.v5) * Decimal(V0) * Decimal(dictionary.c1air))
 
-Gпот = round(Gпот, 2)
-print('16',Gпот, 'Массовый расход газовоздушной смеси, кг/с')
+Gpot = round(Gpot, 2)
+print('16',Gpot, 'Массовый расход газовоздушной смеси, кг/с')
 
 #17. Конечная температура газовоздушной смеси на выходе из огневых отверстий горелки, С:
 
-t_k = Decimal(dictionary.v18) - Decimal(Decimal(dictionary.v18) - Decimal(dictionary.v6)) * Decimal(exp( - ((Decimal(Ftepl) * Decimal(dictionary.v19)) / (Decimal(Gпот) * Decimal(Cp)))))
+t_k = Decimal(dictionary.v18) - Decimal(Decimal(dictionary.v18) - Decimal(dictionary.v6)) * Decimal(exp( - ((Decimal(Ftepl) * Decimal(dictionary.v19)) / (Decimal(Gpot) * Decimal(Cp)))))
 
 t_k = round(t_k, 2)
 print('17',t_k, 'Конечная температура газовоздушной смеси на выходе из огневых отверстий горелки, С:')
@@ -242,8 +242,8 @@ def sqr():
         x2 = (-B - math.sqrt(discr)) / (2 * A)
         return x1,x2
     elif discr == 0:
-        x = -b / (2 * a)
-        return x
+        x3 = -B / (2 * A)
+        return x3
     else:
         return print('Корней нет')
 
