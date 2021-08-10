@@ -219,7 +219,7 @@ u = Decimal(dictionary.v5) * Decimal(V0) / Decimal(S)
 u = round(u, 2)
 print('22',u, 'Коэффициент массовой эжекции')
 
-
+# Если А < 1, то горелка работает в неоптимальном режиме:
 # 23. Параметр А:
 
 A1 = (Decimal(K1) * (Decimal(1) + Decimal(u)) * (Decimal(1) + Decimal(us)) * Decimal(Fc) * Decimal(Fopt)) / Decimal(Fod)
@@ -234,9 +234,9 @@ def sqr():
     B = -2
     A = float(A1)
     C = A
-    #print('A ** 2 * x - B * x + C = 0')
+    # print('A ** 2 * x - B * x + C = 0')
     discr = B ** 2 - 4 * A * C
-    #print(discr)
+    # print(discr)
     if discr > 0:
         x1 = (-B + math.sqrt(discr)) / (2 * A)
         x2 = (-B - math.sqrt(discr)) / (2 * A)
@@ -250,7 +250,44 @@ def sqr():
 sqr = sqr()
 
 x = min(sqr)
-print('x =',x)
+x = round(x, 4)
+print('24', 'x =', x )
+
+# 25. Параметр смесителя при неоптимальном режиме:
+
+F_1 = Decimal(x) * Decimal(Fopt)
+
+F_1 = round(F_1, 2)
+print('25',F_1, 'Параметр смесителя при неоптимальном режиме')
+
+# 26. Площадь горловины смесителя, см2:
+
+F_gor = Decimal(F_1) * Decimal(Fod)
+
+F_gor = round(F_gor, 2)
+print('26',F_gor, 'Площадь горловины смесителя, см2')
+
+# 27. Диаметр горловины смесителя, см2:
+
+dg = Decimal(10) * ((Decimal(4) * Decimal(F_gor)) / Decimal(3.14159)) ** Decimal(0.5)
+
+dg = round(dg, 2)
+print('27',dg, 'Диаметр горловины смесителя, см2')
+
+# Если А = 1, то горелка работает в оптимальном режиме:
+# 28. Площадь горловины смесителя, см2, если А = 1:
+
+F_gor_opt = Decimal(Fopt) * Decimal(Fod)
+
+F_gor_opt = round(F_gor_opt, 2)
+print('28',F_gor_opt, 'Площадь горловины смесителя оптимальная см2')
+
+# 29. Диаметр горловины смесителя, см2 если А = 1:
+
+dg_opt = Decimal('10') * ((Decimal('4') * Decimal(F_gor_opt)) / Decimal('3.14159')) **Decimal('0.5')
+
+dg_opt = round(dg_opt, 2)
+print('29',dg_opt, 'Диаметр горловины смесителя оптимальный, см2')
 
 
 
