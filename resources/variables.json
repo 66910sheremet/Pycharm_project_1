@@ -10,7 +10,7 @@
     },
     {
       "var": "pressures",
-      "value": "1300"
+      "value": "1.300"
     },
     {
       "var": "N =",
@@ -26,31 +26,31 @@
     },
     {
       "var": "Atmosphere pressure",
-      "value": "101325"
+      "value": "101.325"
     },
     {
       "var": "diameter",
-      "value": "0.00319"
+      "value": "3.19"
     },
     {
       "var": "stepd",
-      "value": "0.0001"
+      "value": "0.1"
     },
     {
       "var": "width",
-      "value": "0.002"
+      "value": "2"
     },
     {
       "var": "stepw",
-      "value": "0.0001"
+      "value": "0.1"
     },
     {
       "var": "height",
-      "value": "0.004"
+      "value": "4"
     },
     {
       "var": "steph",
-      "value": "0.0001"
+      "value": "0.1"
     },
     {
       "var": "Fire holes",
@@ -66,7 +66,7 @@
     },
     {
       "var": "Coef. Loss of ejection tube (1.5 or 2.1 or 3)",
-      "value": "1.5"
+      "value": "3"
     },
     {
       "var": "Burner cover temperature",

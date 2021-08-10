@@ -1,8 +1,8 @@
 import generator
 
-# return print(generator.qn)
-#
-# return print(generator.V0)
+#return print(generator.qn)
+
+#return print(generator.V0)
 #
 # return print(generator.rg)
 #
@@ -30,4 +30,5 @@ import generator
 #
 # return print(generator.Fc)
 
-generator.calc()
+#generator.calc()
+
