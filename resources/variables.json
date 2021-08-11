@@ -2,11 +2,11 @@
   "var": [
     {
       "var": "Methane",
-      "value": "50"
+      "value": "60"
     },
     {
       "var": "Carbon dioxide",
-      "value": "50"
+      "value": "40"
     },
     {
       "var": "pressures",
