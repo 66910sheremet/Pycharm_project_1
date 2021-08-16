@@ -1,8 +1,11 @@
 from decimal import Decimal
 from math import sin
 from math import exp
+import time
 
 import dictionary
+
+start = time.time()
 
 # формулы
 # 1. Низшая теплота сгорания газа принятого состава Qн:
@@ -352,3 +355,7 @@ dg_opt = Decimal('10') * ((Decimal('4') * Decimal(F_gor_opt)) / Decimal('3.14159
 
 dg_opt = round(dg_opt, 2)
 print('30', '40.2', dg_opt, 'Диаметр горловины смесителя оптимальный, см2')
+
+
+end = time.time()
+print(end - start)

@@ -77,23 +77,9 @@ def calc():
     return kpdtemp3, diamtert3, heightt3
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 calc = calc()
 print(calc)
 
 
-
 end = time.time()
 print(end - start)
-
