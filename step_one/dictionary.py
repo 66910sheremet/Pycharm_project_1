@@ -1,4 +1,4 @@
-import component
+from step_one import component
 
 c1CH4 = component.getValueFromConst('CH4', 'Molar mass')                              # Молярная масса метана
 c2CH4 = component.getValueFromConst('CH4', 'Gas constant')                            # Газовая постоянна метана

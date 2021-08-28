@@ -1,9 +1,9 @@
 import json
 
-with open('resources/constants.json', 'r') as f:
+with open('./resources/constants.json', 'r') as f:
     const = json.load(f)
 
-with open('resources/variables.json', 'r') as f:
+with open('./resources/variables.json', 'r') as f:
     variant = json.load(f)
 
 
